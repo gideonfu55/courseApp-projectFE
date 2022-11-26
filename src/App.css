@@ -1,0 +1,10 @@
+/* To test post-css */
+:root {
+  --font-family: 'Cascadia Code', sans-serif;
+  --font-color: red;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
