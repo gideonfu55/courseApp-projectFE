@@ -1,13 +1,13 @@
 /* To test post-css */
 :root {
-    --font-family: 'Cascadia Code', sans-serif;
-    --font-color: red;
+  --font-family: 'Cascadia Code', sans-serif;
+  --font-color: black;
 }
 
 body {
-    font-family: var(--font-family);
-    color: var(--font-color);
-    font-size: 1.5rem;
+  font-family: var(--font-family);
+  color: var(--font-color);
+  font-size: 1.5rem;
 }
 
 /* Below code is for Register page */
@@ -43,3 +43,39 @@ body {
 }
 
 /* End of styles for register page */
+
+/* Styles for Login page */
+h5 {
+  margin-bottom: auto;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  padding: 2.5em 5em;
+  box-sizing: border-box;
+  border: 1px solid silver;
+  border-radius: 10px;
+}
+
+input {
+  width: 100%;
+  height: 4vh;
+}
+
+#loginBtn {
+  width: 50%;
+  height: 5vh;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* End of styles for Login page */
