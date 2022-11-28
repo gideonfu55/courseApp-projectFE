@@ -1,7 +1,7 @@
 /* To test post-css */
 :root {
   --font-family: 'Cascadia Code', sans-serif;
-  --font-color: red;
+  --font-color: black;
 }
 
 body {
