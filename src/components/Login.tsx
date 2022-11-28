@@ -19,18 +19,19 @@ const Login = () => {
           <button id="loginBtn">Login</button>
         </section>
 
-        <section className="resetPW">
-          <h5>Forgot your password?</h5>
-          <button id="resetBtn">Reset</button>
-        </section>
+        <div className='center'>
+          <section className="resetPW">
+            <h5>Forgot your password?<button id="resetBtn">Reset</button></h5>
+          </section>
+        </div>
 
         <section className="createAccount">
           <h5>Create new account</h5>
           <p>
-            <a href="">Student</a>
+            <a href="register">Student</a>
           </p>
           <p>
-            <a href="">Course Creator</a>
+            <a href="register">Course Creator</a>
           </p>
         </section>
       </form>
