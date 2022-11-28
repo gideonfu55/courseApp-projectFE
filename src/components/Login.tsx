@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <div className="center">
       <form>
-        <h1 className="">Account Login</h1>
+        <header className="accountLogin"><h1>Account Login</h1></header>
         <section className="email">
           <h5>Email</h5>
           <input typeof="text" required></input>

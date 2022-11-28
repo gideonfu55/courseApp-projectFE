@@ -45,6 +45,13 @@ body {
 /* End of styles for register page */
 
 /* Styles for Login page */
+.accountLogin {
+  text-align: center;
+}
+
+form h1 {
+  font-size: 2rem;
+}
 
 form h5 {
   margin-bottom: auto;
@@ -60,10 +67,11 @@ form p {
 }
 
 form {
-  padding: 2.5em 5em;
+  padding: 2.5em 5.5em;
   box-sizing: border-box;
   border: 1px solid silver;
   border-radius: 10px;
+  margin-bottom: 5em;
 }
 
 input {
