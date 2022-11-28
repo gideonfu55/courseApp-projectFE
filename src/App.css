@@ -45,12 +45,20 @@ body {
 /* End of styles for register page */
 
 /* Styles for Login page */
-h5 {
+.accountLogin {
+  text-align: center;
+}
+
+form h1 {
+  font-size: 2rem;
+}
+
+form h5, form h6 {
   margin-bottom: auto;
 }
 
-p {
-  font-size: 1rem;
+form p {
+  font-size: 0.6em;
 }
 
 .center {
@@ -59,21 +67,33 @@ p {
 }
 
 form {
-  padding: 2.5em 5em;
+  padding: 2.5em 5.5em;
   box-sizing: border-box;
   border: 1px solid silver;
   border-radius: 10px;
+  margin-bottom: 5em;
 }
 
 input {
-  width: 100%;
+  width: 25rem;
   height: 4vh;
 }
 
 #loginBtn {
   width: 50%;
   height: 5vh;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.resetPW {
+  margin-top: 15px;
+}
+
+#resetBtn {
+  margin-left: 10px;
+}
+
+.createAccount {
   text-align: center;
 }
 
