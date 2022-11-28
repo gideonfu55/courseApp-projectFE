@@ -53,12 +53,12 @@ form h1 {
   font-size: 2rem;
 }
 
-form h5 {
+form h5, form h6 {
   margin-bottom: auto;
 }
 
 form p {
-  font-size: 1rem;
+  font-size: 0.6em;
 }
 
 .center {
@@ -75,19 +75,18 @@ form {
 }
 
 input {
-  width: 100%;
+  width: 25rem;
   height: 4vh;
 }
 
 #loginBtn {
-  margin-left: 25%;
   width: 50%;
   height: 5vh;
   margin-top: 20px;
 }
 
 .resetPW {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 #resetBtn {
