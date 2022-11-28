@@ -1,10 +1,45 @@
 /* To test post-css */
 :root {
-  --font-family: 'Cascadia Code', sans-serif;
-  --font-color: red;
+    --font-family: 'Cascadia Code', sans-serif;
+    --font-color: red;
 }
 
 body {
-  font-family: var(--font-family);
-  color: var(--font-color);
+    font-family: var(--font-family);
+    color: var(--font-color);
+    font-size: 1.5rem;
 }
+
+/* Below code is for Register page */
+
+.form {
+    padding: 5% 13%;
+}
+
+.form__field {
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.btn__container {
+    display: flex;
+    justify-content: center;
+}
+
+.label {
+    text-align: right;
+}
+
+.radio__label {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* End of styles for register page */
