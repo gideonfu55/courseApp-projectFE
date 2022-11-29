@@ -20,38 +20,40 @@ const Login: React.FC = () => {
   }
 
     return (
-    <div className="center">
-      <form>
-        <header className="accountLogin"><h1>Account Login</h1></header>
-        <section className="email">
-          <h5>Email</h5>
-          <input typeof="text" required></input>
-        </section>
-
-        <section className="password">
-          <h5>Password</h5>
-          <input typeof="text" required></input>
-        </section>
-
-        <section className="loginButton">
-          <div className='center'>
-            <button id="loginBtn">Login</button>
-          </div>
-        </section>
-
-        <div className='center'>
-          <section className="resetPW">
-            <h6>Forgot your password?<button id="resetBtn">Reset</button></h6>
+    <main className='login'>
+      <div className="center">
+        <form className='loginForm'>
+          <header className="accountLogin"><h1>Account Login</h1></header>
+          <section className="email">
+            <h5>Email</h5>
+            <input typeof="text" required></input>
           </section>
-        </div>
 
-        <section className="createAccount">
-          <h6>Create new account</h6>
-          <p><a href="register">Student</a></p>
-          <p><a href="register">Course Creator</a></p>
-        </section>
-      </form>
-    </div>
+          <section className="password">
+            <h5>Password</h5>
+            <input typeof="text" required></input>
+          </section>
+
+          <section className="loginButton">
+            <div className='center'>
+              <button id="loginBtn">Login</button>
+            </div>
+          </section>
+
+          <div className='center'>
+            <section className="resetPW">
+              <h6>Forgot your password?<button id="resetBtn">Reset</button></h6>
+            </section>
+          </div>
+
+          <section className="createAccount">
+            <h6>Create new account</h6>
+            <p><a href="register">Student</a></p>
+            <p><a href="register">Course Creator</a></p>
+          </section>
+        </form>
+      </div>
+    </main>
   )
 }
 
