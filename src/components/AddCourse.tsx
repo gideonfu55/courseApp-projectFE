@@ -15,28 +15,28 @@ const AddCourse = () => {
         <h3>Add a Course</h3>
         <section className="CourseTitle">
           <h6>Course Title</h6>
-          <input typeof="text" required></input>
+          <input id="addCourseTitle" typeof="text" required></input>
         </section>
 
         <section className="author">
           <h6>Author</h6>
-          <input typeof="text" required></input>
+          <input id="addCourseAuthor" typeof="text" required></input>
         </section>
 
         <section className="summary">
           <h6>Summary</h6>
-          <input typeof="text" required></input>
+          <input id="addSummary" typeof="text" required></input>
         </section>
 
-        <section className="summary">
+        <section className="courseImage">
           <h6>Course Image</h6>
           <label>Select a file:</label>
-          <input type="file" id="myfile" name="myfile"></input>
+          <input id="addCourseImage" type="file" name="myfile"></input>
         </section>
 
         <section className="price">
           <h6>Price</h6>
-          <input typeof="text" required></input>
+          <input id="addPrice" typeof="text" required></input>
         </section>
 
         <section className="submission">
