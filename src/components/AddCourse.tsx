@@ -36,7 +36,7 @@ const AddCourse = () => {
 
         <section className="price">
           <h6>Price</h6>
-          <input id="addPrice" typeof="text" required></input>
+          <input id="addPrice" typeof="text" placeholder="S$" required></input>
         </section>
 
         <section className="submission">
