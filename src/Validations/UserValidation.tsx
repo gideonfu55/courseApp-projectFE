@@ -6,7 +6,7 @@ export const userSchema = yup.object().shape({
     password: yup.string().min(3, 'Password must be at 3 char long'),
     confirmPwd: yup
         .string()
-        .required('Password is mendatory')
+        .required('Password is mandatory')
         .oneOf([yup.ref('password')], 'Passwords does not match'),
     role: yup.string().required('Select Student or Course Creator').oneOf(['student', 'courseCreator']),
 })
