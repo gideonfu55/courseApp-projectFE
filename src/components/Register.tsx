@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as Yup from 'yup'
 import { userSchema } from '../Validations/UserValidation'
-import { ObjectType } from 'typescript'
 
 const Register: React.FC = () => {
     // States for registration
@@ -14,7 +10,8 @@ const Register: React.FC = () => {
     const [userType, setUserType] = useState('')
 
     // States for checking the errors
-    const [currentErrors, setCurrentErrors] = useState([])
+    const [errorMessages, setErrorMessages] = useState([])
+    const [validationError, setValidationError] = useState({})
 
     // Handling the name change
     const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +32,7 @@ const Register: React.FC = () => {
         setConfirmPassword(e.target.value)
     }
 
-    const handleRole = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleUserType = (e: React.ChangeEvent<HTMLInputElement>) => {
       setUserType(e.target.value)
     }
 
@@ -51,14 +48,15 @@ const Register: React.FC = () => {
         const validateResult = await userSchema
             .validate(formData, { abortEarly: false })
             .then((responseData) => {
-                setCurrentErrors([])
+              setErrorMessages([])
                 //submit responseData to the backends
             })
             .catch((err) => {
                 console.log(err)
                 console.log(err.name) // ValidationError
                 console.log(err.errors)
-                setCurrentErrors(err.errors)
+                setValidationError(err.value);
+                setErrorMessages(err.errors)
             })
     }
 
@@ -67,11 +65,6 @@ const Register: React.FC = () => {
             <div>
                 <h1>Register</h1>
             </div>
-            {currentErrors.length == 0
-                ? null
-                : currentErrors.map((e) => {
-                      return <div>{e}</div>
-                  })}
             <div className="form__body">
                 <form onSubmit={handleSubmit}>
                     {/* Labels and inputs for form data */}
@@ -85,6 +78,16 @@ const Register: React.FC = () => {
                             name="name"
                         />
                     </div>
+                    {errorMessages.length == 0
+                    ? null
+                    : errorMessages.map((e: string) => {
+                            if (e.includes('Name')){
+                              return (<div className="form__field">
+                                <label className="label"></label>
+                                <div className="validation__error">{e}</div>
+                              </div>)
+                            }
+                  })}
 
                     <div className="form__field">
                         <label className="label">Email</label>
@@ -96,6 +99,16 @@ const Register: React.FC = () => {
                             name="email"
                         />
                     </div>
+                    {errorMessages.length == 0
+                    ? null
+                    : errorMessages.map((e: string) => {
+                            if (e.includes('Email')){
+                              return (<div className="form__field">
+                                <label className="label"></label>
+                                <div className="validation__error">{e}</div>
+                              </div>)
+                            }
+                  })}
 
                     <div className="form__field">
                         <label className="label">Password</label>
@@ -107,6 +120,23 @@ const Register: React.FC = () => {
                             name="password"
                         />
                     </div>
+                    {errorMessages.length == 0
+                    ? null
+                    : errorMessages.map((e: string) => {
+                            if (e.includes('characters')){
+                              return (<div className="form__field">
+                              <label className="label"></label>
+                              <div className="validation__error">{e}</div>
+                            </div>)
+                          
+                            } else if (e.includes('password')){
+                              return (<div className="form__field">
+                              <label className="label"></label>
+                              <div className="validation__error">{e}</div>
+                            </div>)
+                          
+                            }
+                  })}
 
                     <div className="form__field">
                         <label className="label">Confirm Password</label>
@@ -118,6 +148,16 @@ const Register: React.FC = () => {
                             name="confirmPassword"
                         />
                     </div>
+                    {errorMessages.length == 0
+                    ? null
+                    : errorMessages.map((e: string) => {
+                            if (e.includes('match')){
+                              return (<div className="form__field">
+                                <label className="label"></label>
+                                <div className="validation__error">{e}</div>
+                              </div>)
+                            }
+                  })}
 
                     <div className="form__field">
                         <label className="label">Sign up as</label>
@@ -127,6 +167,7 @@ const Register: React.FC = () => {
                                 id="userTypeStudent"
                                 name="userType"
                                 value="student"
+                                onChange={handleUserType}
                             />
                             <label
                                 className="radio__label"
@@ -148,6 +189,16 @@ const Register: React.FC = () => {
                             </label>
                         </div>
                     </div>
+                    {errorMessages.length == 0
+                    ? null
+                    : errorMessages.map((e: string) => {
+                            if (e.includes('Student')){
+                              return (<div className="form__field">
+                                <label className="label"></label>
+                                <div className="validation__error">{e}</div>
+                              </div>)
+                            }
+                  })}
 
                     <div className="btn__container">
                         <button className="btn" type="submit">
