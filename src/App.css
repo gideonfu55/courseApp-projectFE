@@ -140,9 +140,26 @@ input {
   border-radius: 0px;
 }
 
-.summary label {
+.addCourseForm input {
+  margin-top: 10px;
+  width: 80%;
+}
+
+#addCourseAuthor {
+  width: 30%;
+}
+
+#addSummary {
+  height: 5rem;
+}
+
+.courseImage label {
   font-size: 0.8rem;
   margin-right: 10px;
+}
+
+#addPrice {
+  width: 15%;
 }
 
 .submission {
