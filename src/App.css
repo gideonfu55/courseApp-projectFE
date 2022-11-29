@@ -10,6 +10,23 @@ body {
   font-size: 1.5rem;
 }
 
+/* Nav Bar styles */
+.navigation {
+  display: flex;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  /* padding: 20px 20px; */
+}
+
+#companyLogo {
+  width: 10%;
+}
+
 /* Below code is for Register page */
 
 .form {
@@ -45,12 +62,25 @@ body {
 /* End of styles for register page */
 
 /* Styles for Login page */
-h5 {
+
+.login {
+  margin-top: 100px;
+}
+
+.accountLogin {
+  text-align: center;
+}
+
+form h1 {
+  font-size: 2rem;
+}
+
+h5, h6 {
   margin-bottom: auto;
 }
 
-p {
-  font-size: 1rem;
+form p {
+  font-size: 0.6em;
 }
 
 .center {
@@ -58,24 +88,75 @@ p {
   justify-content: center;
 }
 
+/* Decide if need to place for all pages */
 form {
-  padding: 2.5em 5em;
+  padding: 2.5em 5.5em;
   box-sizing: border-box;
   border: 1px solid silver;
   border-radius: 10px;
+  margin-bottom: 5em;
 }
 
 input {
-  width: 100%;
+  width: 25rem;
   height: 4vh;
 }
+/* Decide if need to place for all pages */
 
 #loginBtn {
   width: 50%;
   height: 5vh;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.resetPW {
+  margin-top: 15px;
+}
+
+#resetBtn {
+  margin-left: 10px;
+}
+
+.createAccount {
   text-align: center;
 }
 
-
 /* End of styles for Login page */
+
+/* Styles for Add Course page */
+
+.courseAddNavBar {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  font-size: 0.75em;
+}
+
+.addCourseForm {
+  width: 85%;
+  margin-left: 40px;
+  padding: 1em 2.5em 3em 2.5em;
+  border-radius: 0px;
+}
+
+.summary label {
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+
+.submission {
+  float: right;
+  margin: 10px 0;
+}
+
+#addBtn {
+  margin-right: 20px;
+  width: 7.5em;
+}
+
+#cancelBtn {
+  width: 7.5em;
+}
+
+/* End of styles for Add Course page */
