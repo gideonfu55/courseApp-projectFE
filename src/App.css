@@ -176,4 +176,9 @@ input {
   width: 7.5em;
 }
 
+.toastBox {
+  font-size: 0.7em;
+}
+
+
 /* End of styles for Add Course page */
