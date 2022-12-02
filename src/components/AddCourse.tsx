@@ -55,7 +55,7 @@ const AddCourse = () => {
         </section>
 
         <section className="submission">
-          <button id="addBtn" onClick={addSuccess}>Add</button>
+          <button id="addBtn" onSubmit={addSuccess}>Add</button>
           <button id="cancelBtn">Cancel</button>
         </section>
       </form>
