@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { string } from 'yargs'
 import { userSchema } from '../Validations/UserValidation'
 
 const Register: React.FC = () => {
@@ -33,7 +34,7 @@ const Register: React.FC = () => {
     }
 
     const handleUserType = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setUserType(e.target.value)
+        setUserType(e.target.value)
     }
 
     const handleSubmit = async (event: React.FormEvent) => {
@@ -48,14 +49,14 @@ const Register: React.FC = () => {
         const validateResult = await userSchema
             .validate(formData, { abortEarly: false })
             .then((responseData) => {
-              setErrorMessages([])
+                setErrorMessages([])
                 //submit responseData to the backends
             })
             .catch((err) => {
                 console.log(err)
                 console.log(err.name) // ValidationError
                 console.log(err.errors)
-                setValidationError(err.value);
+                setValidationError(err.value)
                 setErrorMessages(err.errors)
             })
     }
@@ -79,15 +80,19 @@ const Register: React.FC = () => {
                         />
                     </div>
                     {errorMessages.length == 0
-                    ? null
-                    : errorMessages.map((e: string) => {
-                            if (e.includes('Name')){
-                              return (<div className="form__field">
-                                <label className="label"></label>
-                                <div className="validation__error">{e}</div>
-                              </div>)
-                            }
-                  })}
+                        ? null
+                        : errorMessages.map((e: string) => {
+                              if (e.includes('Name')) {
+                                  return (
+                                      <div className="form__field">
+                                          <label className="label"></label>
+                                          <div className="validation__error">
+                                              {e}
+                                          </div>
+                                      </div>
+                                  )
+                              }
+                          })}
 
                     <div className="form__field">
                         <label className="label">Email</label>
@@ -100,15 +105,19 @@ const Register: React.FC = () => {
                         />
                     </div>
                     {errorMessages.length == 0
-                    ? null
-                    : errorMessages.map((e: string) => {
-                            if (e.includes('Email')){
-                              return (<div className="form__field">
-                                <label className="label"></label>
-                                <div className="validation__error">{e}</div>
-                              </div>)
-                            }
-                  })}
+                        ? null
+                        : errorMessages.map((e: string) => {
+                              if (e.includes('Email')) {
+                                  return (
+                                      <div className="form__field">
+                                          <label className="label"></label>
+                                          <div className="validation__error">
+                                              {e}
+                                          </div>
+                                      </div>
+                                  )
+                              }
+                          })}
 
                     <div className="form__field">
                         <label className="label">Password</label>
@@ -121,22 +130,28 @@ const Register: React.FC = () => {
                         />
                     </div>
                     {errorMessages.length == 0
-                    ? null
-                    : errorMessages.map((e: string) => {
-                            if (e.includes('characters')){
-                              return (<div className="form__field">
-                              <label className="label"></label>
-                              <div className="validation__error">{e}</div>
-                            </div>)
-                          
-                            } else if (e.includes('password')){
-                              return (<div className="form__field">
-                              <label className="label"></label>
-                              <div className="validation__error">{e}</div>
-                            </div>)
-                          
-                            }
-                  })}
+                        ? null
+                        : errorMessages.map((e: string) => {
+                              if (e.includes('characters')) {
+                                  return (
+                                      <div className="form__field">
+                                          <label className="label"></label>
+                                          <div className="validation__error">
+                                              {e}
+                                          </div>
+                                      </div>
+                                  )
+                              } else if (e.includes('password')) {
+                                  return (
+                                      <div className="form__field">
+                                          <label className="label"></label>
+                                          <div className="validation__error">
+                                              {e}
+                                          </div>
+                                      </div>
+                                  )
+                              }
+                          })}
 
                     <div className="form__field">
                         <label className="label">Confirm Password</label>
@@ -149,56 +164,79 @@ const Register: React.FC = () => {
                         />
                     </div>
                     {errorMessages.length == 0
-                    ? null
-                    : errorMessages.map((e: string) => {
-                            if (e.includes('match')){
-                              return (<div className="form__field">
-                                <label className="label"></label>
-                                <div className="validation__error">{e}</div>
-                              </div>)
-                            }
-                  })}
+                        ? null
+                        : errorMessages.map((e: string) => {
+                              if (e.includes('match')) {
+                                  return (
+                                      <div className="form__field">
+                                          <label className="label"></label>
+                                          <div className="validation__error">
+                                              {e}
+                                          </div>
+                                      </div>
+                                  )
+                              }
+                          })}
 
                     <div className="form__field">
                         <label className="label">Sign up as</label>
                         <div className="radio__field">
-                            <input
-                                type="radio"
-                                id="userTypeStudent"
-                                name="userType"
-                                value="student"
-                                onChange={handleUserType}
-                            />
                             <label
                                 className="radio__label"
                                 htmlFor="userTypeStudent"
                             >
+                                <input
+                                    className="radio__input"
+                                    type="radio"
+                                    id="userTypeStudent"
+                                    name="userType"
+                                    value="student"
+                                    onChange={handleUserType}
+                                    style={{
+                                        width: '1rem',
+                                        marginTop: '-1px',
+                                        verticalAlign: 'middle',
+                                        marginRight: '1rem',
+                                    }}
+                                />
                                 Student
                             </label>
-                            <input
-                                type="radio"
-                                id="userTypeCreator"
-                                name="userType"
-                                value="courseCreator"
-                            />
+
                             <label
                                 className="radio__label"
                                 htmlFor="userTypeCreator"
                             >
+                                <input
+                                    className="radio__input"
+                                    type="radio"
+                                    id="userTypeCreator"
+                                    name="userType"
+                                    value="courseCreator"
+                                    style={{
+                                        width: '1rem',
+                                        marginTop: '-1px',
+                                        verticalAlign: 'middle',
+                                        marginRight: '1rem',
+                                    }}
+                                />
                                 Course Creator
                             </label>
                         </div>
                     </div>
                     {errorMessages.length == 0
-                    ? null
-                    : errorMessages.map((e: string) => {
-                            if (e.includes('Student')){
-                              return (<div className="form__field">
-                                <label className="label"></label>
-                                <div className="validation__error">{e}</div>
-                              </div>)
-                            }
-                  })}
+                        ? null
+                        : errorMessages.map((e: string) => {
+                              if (e.includes('Student')) {
+                                  return (
+                                      <div className="form__field">
+                                          <label className="label"></label>
+                                          <div className="validation__error">
+                                              {e}
+                                          </div>
+                                      </div>
+                                  )
+                              }
+                          })}
 
                     <div className="btn__container">
                         <button className="btn" type="submit">
