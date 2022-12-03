@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
 
 const Login: React.FC = () => {
   const [usernameOrEmail, checkEmail] = useState('')
@@ -12,17 +13,30 @@ const Login: React.FC = () => {
   }
 
   const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault()
+    event.preventDefault();
     let formData = {
       usernameOrEmail: usernameOrEmail,
       password: password
     }
   }
 
+  const loginSuccess = () => {
+    toast('Login Successful!', {
+      position: 'bottom-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    })
+  };
+
     return (
     <main className='login'>
       <div className="center">
-        <form className='loginForm'>
+        <form className='loginForm' onSubmit={handleSubmit}>
           <header className="accountLogin"><h1>Account Login</h1></header>
           <section className="email">
             <h5>Email</h5>
@@ -36,7 +50,15 @@ const Login: React.FC = () => {
 
           <section className="loginButton">
             <div className='center'>
-              <button id="loginBtn">Login</button>
+              <button id="loginBtn" 
+                // onSubmit={e => {
+                // handleSubmit(e);
+                // loginSuccess();
+                // }}
+                onClick={loginSuccess}
+              >
+                Login
+              </button>
             </div>
           </section>
 
@@ -52,6 +74,9 @@ const Login: React.FC = () => {
             <p><a href="register">Course Creator</a></p>
           </section>
         </form>
+        <ToastContainer
+          style={{fontSize: 13}}
+        />
       </div>
     </main>
   )

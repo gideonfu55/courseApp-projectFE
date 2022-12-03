@@ -1,3 +1,18 @@
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+
+const addSuccess = () => {
+  toast('✅ Your course has been added successfully!', {
+    position: 'bottom-center',
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'light',
+  })
+};
 
 const AddCourse = () => {
   return (
@@ -40,10 +55,13 @@ const AddCourse = () => {
         </section>
 
         <section className="submission">
-          <button id="addBtn">Add</button>
+          <button id="addBtn" onSubmit={addSuccess}>Add</button>
           <button id="cancelBtn">Cancel</button>
         </section>
       </form>
+      <ToastContainer
+        style={{fontSize: 13}}
+      />
     </div>
   )
 }
