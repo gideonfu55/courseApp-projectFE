@@ -14,6 +14,10 @@ const addSuccess = () => {
   })
 };
 
+const handleSubmit = async (event: React.FormEvent) => {
+  event.preventDefault()
+}
+
 const AddCourse = () => {
   return (
     <div className="addCourse">
@@ -26,7 +30,7 @@ const AddCourse = () => {
         </nav>
       </section>
 
-      <form className="addCourseForm">
+      <form className="addCourseForm" onSubmit={handleSubmit}>
         <h3>Add a Course</h3>
         <section className="CourseTitle">
           <h6>Course Title</h6>
@@ -55,7 +59,7 @@ const AddCourse = () => {
         </section>
 
         <section className="submission">
-          <button id="addBtn" onSubmit={addSuccess}>Add</button>
+          <button id="addBtn" onClick={addSuccess}>Add</button>
           <button id="cancelBtn">Cancel</button>
         </section>
       </form>
