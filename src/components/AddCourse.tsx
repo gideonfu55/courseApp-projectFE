@@ -70,12 +70,12 @@ const AddCourse: React.FC = () => {
   return (
     <div className="addCourse">
       <section className="courseAddNav">
-        <nav>
+        {/* <nav>
           <ul className="courseAddNavBar">
             <li>Add Course</li>
             <li>Manage Courses</li>
           </ul>
-        </nav>
+        </nav> */}
       </section>
 
       <form className="addCourseForm" onSubmit={handleSubmit}>
@@ -89,7 +89,7 @@ const AddCourse: React.FC = () => {
             : errorMessages.map((e: string) => {
               if (e.includes('title')) {
                 return (
-                  <div className="titleError">
+                  <div className="errorMessage">
                     <h6>{e}</h6>
                   </div>
                 )
@@ -114,7 +114,7 @@ const AddCourse: React.FC = () => {
             : errorMessages.map((e: string) => {
               if (e.includes('name')) {
                 return (
-                  <div className="titleError">
+                  <div className="errorMessage">
                     <h6>{e}</h6>
                   </div>
                 )
@@ -139,7 +139,7 @@ const AddCourse: React.FC = () => {
             : errorMessages.map((e: string) => {
               if (e.includes('summary')) {
                 return (
-                  <div className="titleError">
+                  <div className="errorMessage">
                     <h6>{e}</h6>
                   </div>
                 )
@@ -174,7 +174,7 @@ const AddCourse: React.FC = () => {
             : errorMessages.map((e: string) => {
               if (e.includes('price')) {
                 return (
-                  <div className="titleError">
+                  <div className="errorMessage">
                     <h6>{e}</h6>
                   </div>
                 )
