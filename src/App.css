@@ -147,12 +147,27 @@ input {
     width: 80%;
 }
 
+.addTitleHeader {
+    display: flex;
+}
+
+.titleError {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.85em;
+    color: red;
+    margin: auto;
+}
+
 #addCourseAuthor {
     width: 30%;
 }
 
 #addSummary {
     height: 5rem;
+}
+
+.courseImage {
+    margin-top: 2.5em;
 }
 
 .courseImage label {
