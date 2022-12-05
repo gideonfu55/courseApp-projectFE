@@ -118,6 +118,12 @@ input {
     margin-left: 10px;
 }
 
+#resetBtn a:link {
+    text-decoration: none;
+}
+
+
+
 .createAccount {
     text-align: center;
 }
@@ -198,3 +204,42 @@ input {
 }
 
 /* End of styles for Add Course page */
+
+/* Start of styles for Checkout page */
+
+#checkoutHeader {
+    text-align: center;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 250px;
+}
+
+.contactDetails input {
+    margin-bottom: 25px;
+}
+
+.checkoutTop {
+    display: flex;
+}
+
+.orderSummary {
+    position: absolute;
+    right: 7.5%;
+    margin-top: 5rem;
+}
+
+.container-right {
+    border: 1px solid;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 0.8em;
+    width: 300px;
+}
+
+#discountCode {
+    width: 100px;
+    margin-bottom: 10px;
+}
