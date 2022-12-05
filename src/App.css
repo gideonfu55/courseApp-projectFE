@@ -118,6 +118,12 @@ input {
     margin-left: 10px;
 }
 
+#resetBtn a:link {
+    text-decoration: none;
+}
+
+
+
 .createAccount {
     text-align: center;
 }

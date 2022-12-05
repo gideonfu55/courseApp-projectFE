@@ -99,7 +99,7 @@ const Login: React.FC = () => {
               })}
             </div>
             <input
-              type="text"
+              type="password"
               onChange={handlePasswordChange}
               value={password}
             >
@@ -114,7 +114,7 @@ const Login: React.FC = () => {
 
           <div className='center'>
             <section className="resetPW">
-              <h6>Forgot your password?<button id="resetBtn">Reset</button></h6>
+              <h6>Forgot your password?<button id="resetBtn"><a href="index">Reset</a></button></h6>
             </section>
           </div>
 
