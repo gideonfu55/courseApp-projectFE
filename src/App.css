@@ -1,30 +1,30 @@
 /* To test post-css */
 :root {
-  --font-family: 'Cascadia Code', sans-serif;
-  --font-color: black;
+    --font-family: 'Cascadia Code', sans-serif;
+    --font-color: black;
 }
 
 body {
-  font-family: var(--font-family);
-  color: var(--font-color);
-  font-size: 1.5rem;
+    font-family: var(--font-family);
+    color: var(--font-color);
+    font-size: 1.5rem;
 }
 
 /* Nav Bar styles */
 .navigation {
-  display: flex;
+    display: flex;
 }
 
 .navBar {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  list-style: none;
-  /* padding: 20px 20px; */
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    /* padding: 20px 20px; */
 }
 
 #companyLogo {
-  width: 10%;
+    width: 10%;
 }
 
 /* Below code is for Register page */
@@ -55,8 +55,9 @@ body {
 }
 
 .radio__label {
+    display: block;
     font-size: 1.5rem;
-    padding: 0 1rem;
+    margin-bottom: 1rem;
 }
 
 /* End of styles for register page */
@@ -64,61 +65,67 @@ body {
 /* Styles for Login page */
 
 .login {
-  margin-top: 100px;
+    margin-top: 100px;
 }
 
 .accountLogin {
-  text-align: center;
+    text-align: center;
 }
 
-form h1 {
-  font-size: 2rem;
+.login h1 {
+    font-size: 2rem;
 }
 
-h5, h6 {
-  margin-bottom: auto;
+.login p {
+    font-size: 0.6em;
 }
 
-form p {
-  font-size: 0.6em;
+.login h5, h6 {
+    margin-bottom: 10px;
 }
 
 .center {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* Decide if need to place for all pages */
 form {
-  padding: 2.5em 5.5em;
-  box-sizing: border-box;
-  border: 1px solid silver;
-  border-radius: 10px;
-  margin-bottom: 5em;
+    padding: 2.5em 5.5em;
+    box-sizing: border-box;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-bottom: 5em;
 }
 
 input {
-  width: 25rem;
-  height: 4vh;
+    width: 25rem;
+    height: 4vh;
 }
 /* Decide if need to place for all pages */
 
 #loginBtn {
-  width: 50%;
-  height: 5vh;
-  margin-top: 20px;
+    width: 50%;
+    height: 5vh;
+    margin-top: 20px;
 }
 
 .resetPW {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 #resetBtn {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
+#resetBtn a:link {
+    text-decoration: none;
+}
+
+
+
 .createAccount {
-  text-align: center;
+    text-align: center;
 }
 
 /* End of styles for Login page */
@@ -126,59 +133,113 @@ input {
 /* Styles for Add Course page */
 
 .courseAddNavBar {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  list-style: none;
-  font-size: 0.75em;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    font-size: 0.75em;
 }
 
 .addCourseForm {
-  width: 85%;
-  margin-left: 40px;
-  padding: 1em 2.5em 3em 2.5em;
-  border-radius: 0px;
+    width: 85%;
+    margin-top: 40px;
+    margin-left: 40px;
+    padding: 1em 2.5em 3em 2.5em;
+    border-radius: 0px;
 }
 
 .addCourseForm input {
-  margin-top: 10px;
-  width: 80%;
+    margin-top: 10px;
+    width: 80%;
+}
+
+.addTitleHeader {
+    display: flex;
+}
+
+.errorMessage {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.85em;
+    color: red;
+    margin-left: 10vh;
 }
 
 #addCourseAuthor {
-  width: 30%;
+    width: 30%;
 }
 
 #addSummary {
-  height: 5rem;
+    height: 5rem;
+}
+
+.courseImage {
+    margin-top: 2.5em;
 }
 
 .courseImage label {
-  font-size: 0.8rem;
-  margin-right: 10px;
+    font-size: 0.8rem;
+    margin-right: 10px;
 }
 
 #addPrice {
-  width: 15%;
+    width: 15%;
 }
 
 .submission {
-  float: right;
-  margin: 10px 0;
+    float: right;
+    margin: 10px 0;
 }
 
 #addBtn {
-  margin-right: 20px;
-  width: 7.5em;
+    margin-right: 20px;
+    width: 7.5em;
 }
 
 #cancelBtn {
-  width: 7.5em;
+    width: 7.5em;
 }
 
 .toastBox {
-  font-size: 0.7em;
+    font-size: 0.7em;
 }
 
-
 /* End of styles for Add Course page */
+
+/* Start of styles for Checkout page */
+
+#checkoutHeader {
+    text-align: center;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 250px;
+}
+
+.contactDetails input {
+    margin-bottom: 25px;
+}
+
+.checkoutTop {
+    display: flex;
+}
+
+.orderSummary {
+    position: absolute;
+    right: 7.5%;
+    margin-top: 5rem;
+}
+
+.container-right {
+    border: 1px solid;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 0.8em;
+    width: 300px;
+}
+
+#discountCode {
+    width: 100px;
+    margin-bottom: 10px;
+}

@@ -15,6 +15,9 @@ const NavBar = () => {
                     <a href="/addCourse">Add Course</a>
                 </li>
                 <li>
+                    <a href="/checkout">Checkout</a>
+                </li>
+                <li>
                     <a href="/catalogue">Courses</a>
                 </li>
             </ul>
