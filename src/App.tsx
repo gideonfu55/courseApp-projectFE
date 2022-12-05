@@ -7,6 +7,8 @@ import Checkout from './components/Checkout'
 
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
+import Card from './components/Card'
+import CourseCatalogue from './components/CourseCatalogue'
 
 function App() {
     return (
@@ -19,6 +21,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/addCourse" element={<AddCourse />} />
                 <Route path="/checkout" element={<Checkout />} />
+                <Route path="/catalogue" element={<CourseCatalogue />} />
             </Routes>
         </div>
     )
