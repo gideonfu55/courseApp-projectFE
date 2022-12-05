@@ -1,25 +1,15 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
+import { loginValidation } from '../Validations/UserValidation'
 
 const Login: React.FC = () => {
-  const [usernameOrEmail, checkEmail] = useState('')
-  const [password, checkPassword] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const [currentErrors, setCurrentErrors] = useState([])
+  const [validationError, setValidationError] = useState({})
+  const [errorMessages, setErrorMessages] = useState([])
 
-  // Handling the email check
-  const handleEmailCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
-    checkEmail(e.target.value)
-  }
-
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    let formData = {
-      usernameOrEmail: usernameOrEmail,
-      password: password
-    }
-  }
-
+  // Login success message:
   const loginSuccess = () => {
     toast('Login Successful!', {
       position: 'bottom-center',
@@ -33,32 +23,92 @@ const Login: React.FC = () => {
     })
   };
 
+  // Handling the email check
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
+  }
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPassword(e.target.value)
+  }
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    
+    let formData = {
+      email: email,
+      password: password
+    }
+
+    const validateForm = await loginValidation
+      .validate(formData, {abortEarly: false,})
+      .then((responseData) => {
+        setErrorMessages([])
+        loginSuccess()
+      })
+      .catch((err) => {
+        console.log(err.errors)
+        console.log(err.validationError)
+        setValidationError(err.value)
+        setErrorMessages(err.errors)
+      })
+  }
+
     return (
     <main className='login'>
       <div className="center">
         <form className='loginForm' onSubmit={handleSubmit}>
           <header className="accountLogin"><h1>Account Login</h1></header>
           <section className="email">
-            <h5>Email</h5>
-            <input typeof="text" required></input>
+            <div className="addTitleHeader">          
+              <h5>Email</h5>
+              {errorMessages.length === 0
+              ? null
+              : errorMessages.map((e: string) => {
+                if (e.includes('email')) {
+                  return (
+                    <div className="errorMessage">
+                      <h6>{e}</h6>
+                    </div>
+                  )
+                }
+              })}
+            </div>
+            <input 
+              type="text"
+              onChange={handleEmailChange}
+              value={email}
+              required
+            >
+            </input>
           </section>
 
           <section className="password">
-            <h5>Password</h5>
-            <input typeof="text" required></input>
+            <div className="addTitleHeader">        
+              <h5>Password</h5>
+              {errorMessages.length === 0
+              ? null
+              : errorMessages.map((e: string) => {
+                if (e.includes('Password')) {
+                  return (
+                    <div className="errorMessage">
+                      <h6>{e}</h6>
+                    </div>
+                  )
+                }
+              })}
+            </div>
+            <input
+              type="text"
+              onChange={handlePasswordChange}
+              value={password}
+            >
+            </input>
           </section>
 
           <section className="loginButton">
             <div className='center'>
-              <button id="loginBtn" 
-                // onSubmit={e => {
-                // handleSubmit(e);
-                // loginSuccess();
-                // }}
-                onClick={loginSuccess}
-              >
-                Login
-              </button>
+              <button id="loginBtn">Login</button>
             </div>
           </section>
 

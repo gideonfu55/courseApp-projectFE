@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
-import { courseValidation } from "../Validations/UserValidation";
+import { addCourseValidation } from "../Validations/UserValidation";
 
 const addSuccess = () => {
   toast('✅ Your course has been added successfully!', {
@@ -50,10 +50,10 @@ const AddCourse: React.FC = () => {
       title: title,
       authorName: authorName,
       summary: summary,
-      price: price,
+      price: price
     }
 
-    const validateForm = await courseValidation
+    const validateForm = await addCourseValidation
       .validate(formData, {abortEarly: false,})
       .then((responseData) => {
         setErrorMessages([])

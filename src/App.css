@@ -72,17 +72,16 @@ body {
     text-align: center;
 }
 
-form h1 {
+.login h1 {
     font-size: 2rem;
 }
 
-h5,
-h6 {
-    margin-bottom: auto;
+.login p {
+    font-size: 0.6em;
 }
 
-form p {
-    font-size: 0.6em;
+.login h5, h6 {
+    margin-bottom: 10px;
 }
 
 .center {

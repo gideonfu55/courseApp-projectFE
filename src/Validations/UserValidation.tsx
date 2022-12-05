@@ -20,7 +20,16 @@ export const userSchema = yup.object().shape({
         .oneOf(['student', 'courseCreator']),
 })
 
-export const courseValidation = yup.object().shape({
+export const loginValidation = yup.object().shape({
+    email: yup
+        .string()
+        .email('Please enter a valid email.'),
+    password: yup
+        .string()
+        .required('Password is required to login.'),
+})
+
+export const addCourseValidation = yup.object().shape({
     title: yup
         .string()
         .min(5, 'Course title must be at least 5 characters.'),
