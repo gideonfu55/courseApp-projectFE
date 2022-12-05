@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
-import { loginValidation } from '../Validations/UserValidation'
+import { loginValidation } from '../Validations/LoginValidation'
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('')

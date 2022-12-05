@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
-import { addCourseValidation } from "../Validations/UserValidation";
+import { addCourseValidation } from "../Validations/CourseValidation";
 
 const addSuccess = () => {
   toast('✅ Your course has been added successfully!', {
