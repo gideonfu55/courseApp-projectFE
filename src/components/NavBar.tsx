@@ -2,7 +2,7 @@ import companyLogo from '../images/logo.gif'
 
 const NavBar = () => {
     return (
-        <div className='navigation'>
+        <div className="navigation">
             <img id="companyLogo" src={companyLogo} alt="" />
             <ul className="navBar">
                 <li>
@@ -13,6 +13,9 @@ const NavBar = () => {
                 </li>
                 <li>
                     <a href="/addCourse">Add Course</a>
+                </li>
+                <li>
+                    <a href="/catalogue">Courses</a>
                 </li>
             </ul>
         </div>
