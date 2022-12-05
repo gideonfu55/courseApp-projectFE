@@ -13,8 +13,6 @@
         "@types/react-dom": "^18.0.9",
         "formik": "^2.2.9",
         "postcss": "^8.4.19",
-        "postcss-nested": "^6.0.0",
-        "postcss-nesting": "^10.2.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.4.3",
@@ -47,5 +45,18 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "postcss-apply": "^0.12.0",
+        "postcss-atroot": "^0.2.3",
+        "postcss-conditionals": "^2.1.0",
+        "postcss-each": "^1.1.0",
+        "postcss-font-magician": "^3.0.0",
+        "postcss-for": "^2.1.1",
+        "postcss-import": "^15.0.1",
+        "postcss-mixins": "^9.0.4",
+        "postcss-nested": "^6.0.0",
+        "postcss-preset-env": "^7.8.3",
+        "postcss-short": "^5.0.0"
     }
 }
