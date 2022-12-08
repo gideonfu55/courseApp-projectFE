@@ -1,5 +1,6 @@
 import courseImage from '../images/maxresdefault.jpg'
 import CountrySelect from './Form/CountrySelect'
+import PaymentInput from './Form/PaymentInput'
 
 const Checkout = () => {
 
@@ -53,18 +54,18 @@ const Checkout = () => {
 
           <section className="orderSummary">
             <div className="container-right">
-              <h5>Order Summary</h5>
+              <h4>Order Summary</h4>
               <img className="image_placeholder" src={courseImage} alt=""/>
-              <h6>Course Name</h6>
+              <h5>Course Name</h5>
               <div className="discount">
                 <input id="discountCode" type="text" placeholder="Discount Code"/>
                 <button>Apply</button>
               </div>
               <section className="priceCal">
-                <h6>Subtotal</h6>
-                <h6>Discount Code</h6>
-                <h6>Discount</h6>
-                <h6>Total</h6>
+                <h5>Subtotal</h5>
+                <h5>Discount Code</h5>
+                <h5>Discount</h5>
+                <h5>Total</h5>
               </section>
             </div>
           </section>
@@ -89,10 +90,7 @@ const Checkout = () => {
 
         <div className="tab-contents">
           <section id="creditCardDetails" className="tab-content is-selected" data-theme="creditCard">
-            <h6>Card Number</h6>
-            <input type='text'/>
-            <h6>Expiration</h6>
-            <input type='text'/>
+            <PaymentInput />
           </section>
 
           <section id="bankDetails" className="tab-content" data-theme="bankTransfer">
