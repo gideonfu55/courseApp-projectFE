@@ -79,18 +79,18 @@ const AddCourse: React.FC = () => {
       </section>
 
       <form className="addCourseForm" onSubmit={handleSubmit}>
-        <h3>Add a Course</h3>
+        <h2>Add a Course</h2>
 
         <section className="CourseTitle">
           <div className="addTitleHeader">          
-            <h6>Course Title</h6>
+            <h5>Course Title</h5>
             {errorMessages.length === 0
             ? null
             : errorMessages.map((e: string) => {
               if (e.includes('title')) {
                 return (
                   <div className="errorMessage">
-                    <h6>{e}</h6>
+                    <h5>{e}</h5>
                   </div>
                 )
               }
@@ -108,14 +108,14 @@ const AddCourse: React.FC = () => {
 
         <section className="author">
           <div className="addTitleHeader">          
-            <h6>Author</h6>
+            <h5>Author</h5>
             {errorMessages.length === 0
             ? null
             : errorMessages.map((e: string) => {
               if (e.includes('name')) {
                 return (
                   <div className="errorMessage">
-                    <h6>{e}</h6>
+                    <h5>{e}</h5>
                   </div>
                 )
               }
@@ -133,14 +133,14 @@ const AddCourse: React.FC = () => {
 
         <section className="summary">
           <div className="addTitleHeader">          
-            <h6>Summary</h6>
+            <h5>Summary</h5>
             {errorMessages.length === 0
             ? null
             : errorMessages.map((e: string) => {
               if (e.includes('summary')) {
                 return (
                   <div className="errorMessage">
-                    <h6>{e}</h6>
+                    <h5>{e}</h5>
                   </div>
                 )
               }
@@ -157,7 +157,7 @@ const AddCourse: React.FC = () => {
         </section>
 
         <section className="courseImage">
-          <h6>Course Image (optional)</h6>
+          <h5>Course Image (optional)</h5>
           <label>Select a file:</label>
           <input 
             id="addCourseImage"
@@ -168,14 +168,14 @@ const AddCourse: React.FC = () => {
 
         <section className="price">
           <div className="addTitleHeader">          
-            <h6>Price</h6>
+            <h5>Price</h5>
             {errorMessages.length === 0
             ? null
             : errorMessages.map((e: string) => {
               if (e.includes('price')) {
                 return (
                   <div className="errorMessage">
-                    <h6>{e}</h6>
+                    <h5>{e}</h5>
                   </div>
                 )
               }
