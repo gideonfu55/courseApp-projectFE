@@ -214,11 +214,17 @@ input {
 .contactDetails {
     display: flex;
     flex-direction: column;
-    margin-bottom: 250px;
+    margin-bottom: 5rem;
 }
 
 .contactDetails input {
     margin-bottom: 25px;
+}
+
+.countrySelect {
+    margin-bottom: 25px;
+    font-size: 0.6em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .checkoutTop {
@@ -241,5 +247,14 @@ input {
 
 #discountCode {
     width: 100px;
+    height: 15px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
+
+.image_placeholder{
+  width: 100px;
+  height: 80px;
+}
+
+/* End of styles for Checkout page */

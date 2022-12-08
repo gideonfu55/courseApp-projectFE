@@ -23,6 +23,7 @@ function App() {
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/catalogue" element={<CourseCatalogue />} />
             </Routes>
+            
         </div>
     )
 }
