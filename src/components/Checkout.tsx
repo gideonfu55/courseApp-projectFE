@@ -40,9 +40,8 @@ const Checkout = () => {
               placeholder="Postal Code"
               required
             />
-            <div>
-              {/* <label>Country</label> */}
-              <CountrySelect/>
+            <div className='countrySelect'>
+              <CountrySelect />
             </div>
             <input
               type="text"

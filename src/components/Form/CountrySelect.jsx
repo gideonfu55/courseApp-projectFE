@@ -4,14 +4,17 @@ import countryList from 'react-select-country-list'
 
 const CountrySelect = () => {
   const [value, setValue] = useState('')
-  const options = useMemo(() => countryList().getData(), [])
+  const options = useMemo(() => countryList().setEmpty('Please select a country').getData(), [])
 
-  const changeHandler = selectedOption => {
-    setValue(selectedOption)
+  const changeHandler = value => {
+    if (value.length <= 1 && value === '') {
+      setValue('Please select a Country')
+    }
+    setValue(value)
   }
 
   return (
-    <Select option={options} value={value} onChange={changeHandler} />
+    <Select options={options} value={value} onChange={changeHandler} />
   )
 }
 
