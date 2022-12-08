@@ -47,6 +47,8 @@
         ]
     },
     "devDependencies": {
+        "@types/react-select": "^5.0.1",
+        "@types/react-select-country-list": "^2.2.1",
         "postcss-apply": "^0.12.0",
         "postcss-atroot": "^0.2.3",
         "postcss-conditionals": "^2.1.0",
@@ -57,6 +59,8 @@
         "postcss-mixins": "^9.0.4",
         "postcss-nested": "^6.0.0",
         "postcss-preset-env": "^7.8.3",
-        "postcss-short": "^5.0.0"
+        "postcss-short": "^5.0.0",
+        "react-select": "^5.7.0",
+        "react-select-country-list": "^2.2.3"
     }
 }

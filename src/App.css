@@ -241,5 +241,14 @@ input {
 
 #discountCode {
     width: 100px;
+    height: 15px;
+    margin-right: 10px;
     margin-bottom: 10px;
 }
+
+.image_placeholder{
+  width: 100px;
+  height: 80px;
+}
+
+/* End of styles for Checkout page */
