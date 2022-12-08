@@ -7,8 +7,8 @@ import Checkout from './components/Checkout'
 
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/NavBar'
-import Card from './components/Card'
-import CourseCatalogue from './components/CourseCatalogue'
+import Card from './components/card/Card'
+import CourseCatalogue from './components/courseCatalogue/CourseCatalogue'
 
 function App() {
     return (
