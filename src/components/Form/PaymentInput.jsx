@@ -32,7 +32,7 @@ const PaymentInput = () => {
       {({ handleSubmit }) => (
         <form onSubmit={handleSubmit}>
           <div className="creditCardInput">
-            <PaymentInputsWrapper {...wrapperProps}>
+            <PaymentInputsWrapper {...wrapperProps} className="CCInputContainer">
               <svg {...getCardImageProps({ images })} />
               <Field name="cardNumber">
                 {({ field }) => (

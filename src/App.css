@@ -91,7 +91,7 @@ body {
 }
 
 /* Decide if need to place for all pages */
-form {
+.login form {
     padding: 2.5em 5.5em;
     box-sizing: border-box;
     border: 1px solid silver;
@@ -205,6 +205,11 @@ input {
 
 /* Start of styles for Checkout page */
 
+.checkout Form {
+    padding: 2.5em 5em;
+    margin-bottom: 5em;
+}
+
 #checkoutHeader {
     text-align: center;
 }
@@ -254,8 +259,20 @@ input {
   height: 80px;
 }
 
+.creditTab-container {
+    height: 10em;
+    border: 1px solid silver;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.CCInputContainer {
+    margin-left: -50px;
+}
+
 #CCSubmit {
     margin-top: 15px;
+    margin-left: -50px;
 }
 
 /* End of styles for Checkout page */

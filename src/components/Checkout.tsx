@@ -5,7 +5,7 @@ import PaymentInput from './Form/PaymentInput'
 const Checkout = () => {
 
   return (
-    <div>
+    <div className='checkout'>
       <h1 id="checkoutHeader">Checkout</h1>
       <form>
         <div className="checkoutTop">
@@ -90,7 +90,9 @@ const Checkout = () => {
 
         <div className="tab-contents">
           <section id="creditCardDetails" className="tab-content is-selected" data-theme="creditCard">
-            <PaymentInput />
+            <div className='creditTab-container'>
+              <PaymentInput />
+            </div>
           </section>
 
           <section id="bankDetails" className="tab-content" data-theme="bankTransfer">
