@@ -64,6 +64,7 @@ const Checkout = () => {
                 <h6>Subtotal</h6>
                 <h6>Discount Code</h6>
                 <h6>Discount</h6>
+                <h6>Total</h6>
               </section>
             </div>
           </section>

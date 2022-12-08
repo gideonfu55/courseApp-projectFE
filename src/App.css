@@ -214,7 +214,7 @@ input {
 .contactDetails {
     display: flex;
     flex-direction: column;
-    margin-bottom: 250px;
+    margin-bottom: 5rem;
 }
 
 .contactDetails input {
