@@ -1,7 +1,7 @@
 import React from 'react'
 import './courseCatalogue.css'
-import Card from './Card'
-import testImage from '../assets/AZ-400_BlogImage.png'
+import Card from '../card/Card'
+import testImage from '../../assets/AZ-400_BlogImage.png'
 
 const CourseCatalogue = () => {
     return (
