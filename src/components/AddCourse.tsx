@@ -124,7 +124,7 @@ const AddCourse: React.FC = () => {
           <input 
             id="addCourseAuthor"
             type="text"
-            placeholder="Enter your name"
+            placeholder="Enter your full name"
             onChange={handleNameChange}
             value={authorName}
             required
@@ -184,7 +184,7 @@ const AddCourse: React.FC = () => {
           <input 
             id="addPrice"
             type="text"
-            placeholder="S$"
+            placeholder="Minimum S$10"
             onChange={handlePriceChange}
             value={price}
             required
@@ -193,7 +193,7 @@ const AddCourse: React.FC = () => {
 
         <section className="submission">
           <button id="addBtn">Add</button>
-          <button id="cancelBtn">Cancel</button>
+          <button id="cancelBtn">Clear</button>
         </section>
       </form>
       <ToastContainer

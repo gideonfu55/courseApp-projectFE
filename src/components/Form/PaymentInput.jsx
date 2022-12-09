@@ -1,60 +1,31 @@
-import { Formik, Field } from "formik";
-import { usePaymentInputs, PaymentInputsWrapper } from 'react-payment-inputs';
+import { usePaymentInputs, PaymentInputsContainer } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images'
 
 const PaymentInput = () => {
-  const {meta, getCardImageProps, getCardNumberProps, getExpiryDateProps, getCVCProps, wrapperProps} = usePaymentInputs();
+  const {meta, getCardImageProps, getCardNumberProps, getExpiryDateProps, getCVCProps} = usePaymentInputs();
 
   return (
-    <Formik
-      initialValues={{
-        cardNumber: '',
-        expiryDate: '',
-        cvc: ''
-      }}
+    <div className='CCInputBox'>
+      <div className="input-group">
+        <svg {...getCardImageProps({ images })} />
+        <label>Card Number</label>
+        <input {...getCardNumberProps()} />
+      </div>
 
-      onSubmit={data => console.log(data)}
-      validate={() => {
-        let errors = {};
-        if (meta.erroredInputs.cardNumber) {
-          errors.cardNumber = meta.erroredInputs.cardNumber;
-        }
-        if (meta.erroredInputs.expiryDate) {
-          errors.expiryDate = meta.erroredInputs.expiryDate;
-        }
-        if (meta.erroredInputs.cvc) {
-          errors.cvc = meta.erroredInputs.cvc;
-        }
+      <div className="multi-input">
+        <div className="input-group">
+          <label>Valid Till</label>
+          <input {...getExpiryDateProps()} />
+        </div>
 
-        return errors;
-      }}
-    >
-      {({ handleSubmit }) => (
-        <form onSubmit={handleSubmit}>
-          <div className="creditCardInput">
-            <PaymentInputsWrapper {...wrapperProps} className="CCInputContainer">
-              <svg {...getCardImageProps({ images })} />
-              <Field name="cardNumber">
-                {({ field }) => (
-                  <input {...getCardNumberProps({ onBlur: field.onBlur, onChange: field.onChange })} />
-                )}
-              </Field>
-              <Field name="expiryDate">
-                {({ field }) => (
-                  <input {...getExpiryDateProps({ onBlur: field.onBlur, onChange: field.onChange })} />
-                )}
-              </Field>
-              <Field name="cvc">
-                {({ field }) => <input {...getCVCProps({ onBlur: field.onBlur, onChange: field.onChange })} />}
-              </Field>
-            </PaymentInputsWrapper>
-          </div>
-          <button id="CCSubmit" type="submit">
-            Submit
-          </button>
-        </form>
-      )}
-    </Formik>
+        <div className="input-group">
+          <label>CVC</label>
+          <input {...getCVCProps()} />
+        </div>
+      </div>
+      
+      <small>{meta.isTouched && meta.error && <span>Error: {meta.error}</span>}</small>
+    </div>
   );
 }
 

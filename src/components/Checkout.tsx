@@ -4,10 +4,14 @@ import PaymentInput from './Form/PaymentInput'
 
 const Checkout = () => {
 
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+  }
+
   return (
     <div className='checkout'>
       <h1 id="checkoutHeader">Checkout</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="checkoutTop">
           <section className="contactDetails">
             <h3>Contact Information</h3>
@@ -96,17 +100,18 @@ const Checkout = () => {
           </section>
 
           <section id="bankDetails" className="tab-content" data-theme="bankTransfer">
-            <h6>Bank Account to Transfer</h6>
-            <h6>POSB</h6>
-            <h6>1234-567-8</h6>
-            <h6>Please mention in comments your Name and Course purchased.</h6>
+            <h5>Bank Account to Transfer</h5>
+            <h5>POSB</h5>
+            <h5>1234-567-8</h5>
+            <h5>Please mention in comments your Name and Course purchased.</h5>
           </section>
 
           <section id="payNowDetails" className="tab-content" data-theme="payNow">
-            <h6>PayNow Number to Transfer</h6>
+            <h5>PayNow Number to Transfer</h5>
           </section>
-
         </div>
+
+        <button>Complete Purchase</button>
       </form>
     </div>
   )
