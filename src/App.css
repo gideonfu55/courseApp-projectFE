@@ -253,7 +253,9 @@ input {
 .creditTab-container {
     height: 15em;
     border: 1px solid silver;
-    border-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding: 10px 35px;
 }
 
@@ -317,6 +319,8 @@ small {
 
 .tabs label {
     cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     border: 2px solid lightgray;
     padding: 10px;
 }

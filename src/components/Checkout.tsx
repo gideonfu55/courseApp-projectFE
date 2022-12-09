@@ -93,11 +93,11 @@ const Checkout = () => {
           </section>
         </div>
 
-        <div className="tab-contents">
-          {/* <section id="payNowDetails" className="tab-content" data-theme="payNow">
+        {/* <div className="tab-contents">
+          <section id="payNowDetails" className="tab-content" data-theme="payNow">
             <h5>PayNow Number to Transfer</h5>
-          </section> */}
-        </div>
+          </section>
+        </div> */}
 
         <button id="buySubmit">Complete Purchase</button>
       </form>

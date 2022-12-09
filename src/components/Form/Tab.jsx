@@ -11,7 +11,7 @@ const Tab = ({ title, tabs }) => {
     <div className='Tab'>
       {title && <h4 className='title'>{title}</h4>}
       <div className='body'>
-        {Object.keys(tabs).length === 0 
+        {Object.keys(tabs).length === 0
           ? (<div>No Tabs</div>) 
           : (
           <div>
