@@ -99,7 +99,7 @@ const Checkout = () => {
           </section> */}
         </div>
 
-        <button>Complete Purchase</button>
+        <button id="buySubmit">Complete Purchase</button>
       </form>
     </div>
   )

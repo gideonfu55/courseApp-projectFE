@@ -317,11 +317,11 @@ small {
 
 .tabs label {
     cursor: pointer;
-    border: 2px solid silver;
+    border: 2px solid lightgray;
     padding: 10px;
 }
 
-.checkout form button {
+#buySubmit {
     margin-top: 2em;
     width: 100%;
 }
