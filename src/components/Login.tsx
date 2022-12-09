@@ -68,14 +68,14 @@ const Login: React.FC = () => {
                 if (e.includes('email')) {
                   return (
                     <div className="errorMessage">
-                      <h6>{e}</h6>
+                      <h5>{e}</h5>
                     </div>
                   )
                 }
               })}
             </div>
             <input 
-              type="text"
+              type='text'
               onChange={handleEmailChange}
               value={email}
               required
@@ -92,7 +92,7 @@ const Login: React.FC = () => {
                 if (e.includes('Password')) {
                   return (
                     <div className="errorMessage">
-                      <h6>{e}</h6>
+                      <h5>{e}</h5>
                     </div>
                   )
                 }
