@@ -4,6 +4,7 @@ import CountrySelect from './Form/CountrySelect'
 import Tab from './Form/Tab'
 import PaymentInput from './Form/PaymentInput'
 import BankTransfer from './Form/BankTransfer'
+import PayNow from './Form/PayNow'
 
 const Checkout = () => {
 
@@ -86,18 +87,12 @@ const Checkout = () => {
                 tabs={[
                   { name: "Credit Card", content: <PaymentInput /> },
                   { name: "Bank Transfer", content: <BankTransfer /> },
-                  { name: "PayNow", content: "PayNow number and QR Code below:"}
+                  { name: "PayNow", content: <PayNow />}
                 ]}
               />
             </div>
           </section>
         </div>
-
-        {/* <div className="tab-contents">
-          <section id="payNowDetails" className="tab-content" data-theme="payNow">
-            <h5>PayNow Number to Transfer</h5>
-          </section>
-        </div> */}
 
         <button id="buySubmit">Complete Purchase</button>
       </form>

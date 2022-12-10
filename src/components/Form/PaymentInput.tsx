@@ -6,10 +6,10 @@ const PaymentInput = () => {
 
   return (
     <section id="creditCardDetails">
-      <div className='paymentInputCard'>
+      <div className='paymentInputContainer'>
         <div className='CCInputBox'>
           <div className="input-group">
-            <svg {...getCardImageProps({ images })} />
+            <svg {...getCardImageProps()} />
             <label>Card Number</label>
             <input {...getCardNumberProps()} />
           </div>

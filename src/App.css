@@ -250,9 +250,9 @@ input {
   height: 80px;
 }
 
-.creditTab-container {
+.paymentInputContainer {
     height: 15em;
-    border: 1px solid silver;
+    border: 2px solid lightgrey;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -313,8 +313,8 @@ small {
 }
 
 .tabs {
-    display: flex;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .tabs label {
@@ -323,6 +323,17 @@ small {
     border-top-right-radius: 10px;
     border: 2px solid lightgray;
     padding: 10px;
+}
+
+.tab {
+  position: relative;
+  background-color: lightsteelblue;
+}
+
+.tabs .active-tab {
+    filter: none;
+    background-color: white;
+    border-bottom: 2px solid white;
 }
 
 #buySubmit {
