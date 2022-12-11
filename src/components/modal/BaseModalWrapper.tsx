@@ -3,6 +3,7 @@ import { boolean } from 'yargs'
 import Modal from './Modal'
 import testImage from '../../assets/AZ-400_BlogImage.png'
 import {
+    AuthorContainer,
     Body,
     Button,
     ButtonContainer,
@@ -24,6 +25,7 @@ interface BaseModalWrapperProps {
     header: string
     message?: string
     title: string
+    author: string
     price: number
     summary: string
     rating: number
@@ -35,6 +37,7 @@ const BaseModalWrapper: React.FC<BaseModalWrapperProps> = ({
     header,
     message,
     title,
+    author,
     price,
     summary,
     rating,
@@ -51,7 +54,10 @@ const BaseModalWrapper: React.FC<BaseModalWrapperProps> = ({
                 </DesktopCloseButton>
                 <Header>{header}</Header>
                 <Body>
-                    <TitleContainer>{title}</TitleContainer>
+                    <TitleContainer>
+                        {title} <br />
+                        <AuthorContainer>{author}</AuthorContainer>
+                    </TitleContainer>
                     <PriceContainer>S${price}</PriceContainer>
                     <ImageContainer src={testImage}></ImageContainer>
                     <SummaryContainer>{summary}</SummaryContainer>

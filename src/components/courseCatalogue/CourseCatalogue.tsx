@@ -70,6 +70,7 @@ const CourseCatalogue = () => {
                 header="Purchase Course"
                 message="This is the content"
                 title="Azure DevOps For Beginners"
+                author="Mark Tan"
                 price={100}
                 summary={tempText}
                 rating={5}

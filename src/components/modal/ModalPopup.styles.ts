@@ -43,12 +43,15 @@ export const TitleContainer = styled.div`
     padding: 1rem 0;
     font-size: 20px;
 `
+export const AuthorContainer = styled.div`
+    color: rgba(0, 0, 0, 0.6);
+`
 
 export const PriceContainer = styled.div`
     grid-area: price;
     padding: 1rem 0;
     font-size: 20px;
-    text-align: center;
+    text-align: right;
 `
 
 export const ImageContainer = styled.img`
