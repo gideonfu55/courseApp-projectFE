@@ -7,26 +7,28 @@ const PaymentInput = () => {
   return (
     <section id="creditCardDetails">
       <div className='paymentInputContainer'>
-        <div className='CCInputBox'>
-          <div className="input-group">
-            <svg {...getCardImageProps({ images })} />
-            <label>Card Number</label>
-            <input {...getCardNumberProps()} />
-          </div>
-
-          <div className="multi-input">
+        <div className='align-center'>
+          <div className='CCInputBox'>
             <div className="input-group">
-              <label>Valid Till</label>
-              <input {...getExpiryDateProps()} />
+              <svg {...getCardImageProps({ images })} />
+              <label>Card Number</label>
+              <input {...getCardNumberProps()} />
             </div>
 
-            <div className="input-group">
-              <label>CVC</label>
-              <input {...getCVCProps()} />
-            </div>
-          </div>
+            <div className="multi-input">
+              <div className="input-group">
+                <label>Valid Till</label>
+                <input {...getExpiryDateProps()} />
+              </div>
 
-          <small>{meta.isTouched && meta.error && <span>Error: {meta.error}</span>}</small>
+              <div className="input-group">
+                <label>CVC</label>
+                <input {...getCVCProps()} />
+              </div>
+            </div>
+
+            <small>{meta.isTouched && meta.error && <span>Error: {meta.error}</span>}</small>
+          </div>
         </div>
       </div>
     </section>
