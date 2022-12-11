@@ -250,20 +250,13 @@ input {
     height: 80px;
 }
 
-.creditTab-container {
-    height: 13em;
-    border: 1px solid silver;
-    border-radius: 10px;
-    padding: 10px 15px;
-}
-
-.CCInputContainer {
-    margin-left: -50px;
-}
-
-#CCSubmit {
-    margin-top: 15px;
-    margin-left: -50px;
+.paymentInputContainer {
+    height: 15em;
+    border: 2px solid lightgrey;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px 35px;
 }
 
 /* Credit Card Input */
@@ -275,9 +268,7 @@ input {
 
 .CCInputBox {
     box-sizing: border-box;
-    /* border: 5px solid; */
     font-weight: 700;
-    margin: auto 2em;
     padding: 1em;
     width: 600px;
 }
@@ -290,7 +281,7 @@ input {
 
 .input-group input {
     width: 100%;
-    margin: auto;
+    margin: 7px auto;
     border-radius: 5px;
     border: 1px solid gray;
 }
@@ -319,6 +310,35 @@ small {
     font-size: 0.85em;
     display: block;
     margin-top: 10px;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tabs label {
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid lightgray;
+    padding: 10px;
+}
+
+.tab {
+    position: relative;
+    background-color: lightsteelblue;
+}
+
+.tabs .active-tab {
+    filter: none;
+    background-color: white;
+    border-bottom: 2px solid white;
+}
+
+#buySubmit {
+    margin-top: 2em;
+    width: 100%;
 }
 
 /* End of styles for Checkout page */
