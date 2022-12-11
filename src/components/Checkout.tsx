@@ -1,6 +1,10 @@
 import courseImage from '../images/maxresdefault.jpg'
 import CountrySelect from './Form/CountrySelect'
+
+import Tab from './Form/Tab'
 import PaymentInput from './Form/PaymentInput'
+import BankTransfer from './Form/BankTransfer'
+import PayNow from './Form/PayNow'
 
 const Checkout = () => {
 
@@ -77,41 +81,20 @@ const Checkout = () => {
 
         <div className='checkoutBtm'>
           <section className='payment'>
-            <h3>Payment Method</h3>
             <div className='payModeTabs'>
-              <button className="tab is-selected" data-theme="creditCard">
-                Credit Card
-              </button>
-              <button className="tab" data-theme="bankTransfer">
-                Bank Transfer
-              </button>
-              <button className="tab" data-theme="payNow">
-                PayNow
-              </button>
+              <Tab 
+                title={"Payment Method"}
+                tabs={[
+                  { name: "Credit Card", content: <PaymentInput /> },
+                  { name: "Bank Transfer", content: <BankTransfer /> },
+                  { name: "PayNow", content: <PayNow />}
+                ]}
+              />
             </div>
           </section>
         </div>
 
-        <div className="tab-contents">
-          <section id="creditCardDetails" className="tab-content is-selected" data-theme="creditCard">
-            <div className='creditTab-container'>
-              <PaymentInput />
-            </div>
-          </section>
-
-          <section id="bankDetails" className="tab-content" data-theme="bankTransfer">
-            <h5>Bank Account to Transfer</h5>
-            <h5>POSB</h5>
-            <h5>1234-567-8</h5>
-            <h5>Please mention in comments your Name and Course purchased.</h5>
-          </section>
-
-          <section id="payNowDetails" className="tab-content" data-theme="payNow">
-            <h5>PayNow Number to Transfer</h5>
-          </section>
-        </div>
-
-        <button>Complete Purchase</button>
+        <button id="buySubmit">Complete Purchase</button>
       </form>
     </div>
   )
