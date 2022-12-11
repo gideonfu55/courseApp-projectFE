@@ -1,4 +1,3 @@
-import React from 'react'
 import './App.css'
 import Login from './components/Login'
 import Register from './components/Register'
@@ -23,7 +22,6 @@ function App() {
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/catalogue" element={<CourseCatalogue />} />
             </Routes>
-            
         </div>
     )
 }

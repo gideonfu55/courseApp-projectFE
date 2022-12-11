@@ -245,9 +245,9 @@ input {
     margin-bottom: 10px;
 }
 
-.image_placeholder{
-  width: 100px;
-  height: 80px;
+.image_placeholder {
+    width: 100px;
+    height: 80px;
 }
 
 .creditTab-container {
@@ -315,19 +315,19 @@ input {
 }
 
 small {
-  color: red;
-  font-size: 0.85em;
-  display: block;
-  margin-top: 10px;
+    color: red;
+    font-size: 0.85em;
+    display: block;
+    margin-top: 10px;
 }
-
 
 /* End of styles for Checkout page */
 
 /* Styles for Error Messages */
 
 .errorMessage {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 0.95em;
     color: red;
     margin-left: 3em;
