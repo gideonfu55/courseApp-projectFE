@@ -251,12 +251,19 @@ input {
 }
 
 .paymentInputContainer {
+    position: relative;
     height: 15em;
     border: 2px solid lightgrey;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top: none;
+    border-bottom-right-radius: 10x;
+    border-bottom-left-radius: 10px;
     padding: 10px 35px;
+}
+
+.align-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Credit Card Input */
@@ -281,6 +288,7 @@ input {
 
 .input-group input {
     width: 100%;
+    height: 20%;
     margin: 7px auto;
     border-radius: 5px;
     border: 1px solid gray;
@@ -303,6 +311,10 @@ input {
     width: 60%;
     display: flex;
     gap: 5em;
+}
+
+.multi-input input {
+    height: 20%
 }
 
 small {

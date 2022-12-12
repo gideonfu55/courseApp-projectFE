@@ -2,7 +2,7 @@ import courseImage from '../images/maxresdefault.jpg'
 import CountrySelect from './Form/CountrySelect'
 
 import Tab from './Form/Tab'
-import PaymentInput from './Form/PaymentInput'
+import PaymentInput from './Form/CreditCardInput'
 import BankTransfer from './Form/BankTransfer'
 import PayNow from './Form/PayNow'
 

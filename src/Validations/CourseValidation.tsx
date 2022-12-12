@@ -12,5 +12,5 @@ export const addCourseValidation = yup.object().shape({
         .min(10, 'Your summary should be at least 10 characters.'),
     price: yup
         .number()
-        .min(50, 'The minimal price for each course is $10.'),
+        .min(10, 'The minimal price for each course is $10.'),
 })
