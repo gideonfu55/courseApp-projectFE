@@ -12,18 +12,18 @@ const PaymentInput = () => {
             <div className="input-group">
               <svg {...getCardImageProps({ images })} />
               <label>Card Number</label>
-              <input {...getCardNumberProps()} />
+              <input {...getCardNumberProps()} required/>
             </div>
 
             <div className="multi-input">
               <div className="input-group">
                 <label>Valid Till</label>
-                <input {...getExpiryDateProps()} />
+                <input {...getExpiryDateProps()} required/>
               </div>
 
               <div className="input-group">
                 <label>CVC</label>
-                <input {...getCVCProps()} />
+                <input {...getCVCProps()} required/>
               </div>
             </div>
 
