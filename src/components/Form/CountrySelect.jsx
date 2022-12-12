@@ -22,6 +22,7 @@ const CountrySelect = () => {
       options={options}
       value={value}
       onChange={textChangeHandler}
+      required
     />
   )
 }

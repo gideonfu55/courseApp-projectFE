@@ -372,6 +372,12 @@ small {
     border-bottom: white;
 }
 
+.tab-content label {
+    font-weight: bold;
+    font-size: 0.8em;
+    padding-left: 0.5em;
+}
+
 #buySubmit {
     margin-top: 2em;
     width: 100%;
