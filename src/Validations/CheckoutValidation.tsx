@@ -1,16 +1,26 @@
 import * as yup from 'yup'
 
 export const checkoutValidation = yup.object().shape({
-    title: yup
+    firstName: yup
         .string()
-        .min(5, 'Course title must be at least 5 characters.'),
-    authorName: yup
+        .required('Required'),
+    lastName: yup
         .string()
-        .min(5, 'Please include your full name.'),
-    summary: yup
+        .required('Required'),
+    email: yup
         .string()
-        .min(10, 'Your summary should be at least 10 characters.'),
-    price: yup
-        .number()
-        .min(10, 'The minimal price for each course is $10.'),
+        .email('Enter a valid email')
+        .required('Required'),
+    address: yup
+        .string()
+        .min(5, 'Please enter full details')
+        .required(),
+    postal: yup
+        .string()
+        .min(6, 'Please enter a valid postal code')
+        .required(),
+    mobile: yup
+        .string()
+        .min(8, 'Please enter a valid mobile number')
+        .required()
 })
