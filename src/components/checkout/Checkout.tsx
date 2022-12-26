@@ -8,20 +8,40 @@ import PayNow from '../Form/PayNow'
 
 import { useFormik } from 'formik'
 import { checkoutValidation } from '../../Validations/CheckoutValidation'
+import { toast } from 'react-toastify'
 
-const Checkout = () => {
+const Checkout: React.FC = () => {
     // const handleSubmit = async (event: React.FormEvent) => {
     //   event.preventDefault()
     // }
 
+    // Login success message:
+    const orderSubmit = () => {
+        toast('Order has been place!', {
+            position: 'bottom-center',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+        })
+    }
+
     const formik = useFormik({
         initialValues: {
-            contactFirstName: '',
-            contactLastName: '',
-            contactEmail: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            address: '',
+            postal: '',
+            country: '',
+            mobile: '',
         },
+        // validationSchema: {checkoutValidation},
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2))
+            console.log(JSON.stringify(values, null, 2))
         },
     })
 
@@ -35,35 +55,37 @@ const Checkout = () => {
                             <h3 id="contactInfoHeader">Contact Information</h3>
                             <input
                                 type="text"
-                                id="contactEmail"
+                                id="email"
                                 placeholder="Email"
                                 onChange={formik.handleChange}
-                                value={formik.values.contactEmail}
-                                required
+                                value={formik.values.email}
+                                // required
                             />
                             <div className="container-name">
                                 <input
                                     type="text"
-                                    id="contactFirstName"
+                                    id="firstName"
                                     placeholder="First Name"
                                     onChange={formik.handleChange}
-                                    value={formik.values.contactFirstName}
-                                    required
+                                    value={formik.values.firstName}
+                                    // required
                                 />
                                 <input
                                     type="text"
-                                    id="contactLastName"
+                                    id="lastName"
                                     placeholder="Last Name"
                                     onChange={formik.handleChange}
-                                    value={formik.values.contactLastName}
-                                    required
+                                    value={formik.values.lastName}
+                                    // required
                                 />
                             </div>
                             <input
                                 type="text"
-                                id="contactAddress"
+                                id="address"
                                 placeholder="Address"
-                                required
+                                onChange={formik.handleChange}
+                                value={formik.values.address}
+                                // required
                             />
                             <div className="container-postal">
                                 <div className="countrySelect">
@@ -71,16 +93,20 @@ const Checkout = () => {
                                 </div>
                                 <input
                                     type="text"
-                                    id="contactPostal"
+                                    id="postal"
                                     placeholder="Postal Code"
-                                    required
+                                    onChange={formik.handleChange}
+                                    value={formik.values.postal}
+                                    // required
                                 />
                             </div>
                             <input
                                 type="text"
-                                id="contactNum"
+                                id="mobile"
                                 placeholder="Mobile Number"
-                                required
+                                onChange={formik.handleChange}
+                                value={formik.values.mobile}
+                                // required
                             />
                         </section>
                     </div>
