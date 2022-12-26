@@ -1,8 +1,8 @@
 import './App.css'
-import Login from './components/Login'
-import Register from './components/Register'
-import AddCourse from './components/AddCourse'
-import Checkout from './components/Checkout'
+import Login from './components/login/Login'
+import Register from './components/register/Register'
+import AddCourse from './components/addCourse/AddCourse'
+import Checkout from './components/checkout/Checkout'
 
 import { Routes, Route } from 'react-router-dom'
 import NavBar from './components/navbar/NavBar'
