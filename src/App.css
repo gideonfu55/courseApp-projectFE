@@ -219,13 +219,16 @@ body {
     height: 5vh;
 }
 
-.container-name, .container-postal {
+.container-name,
+.container-postal {
     display: flex;
     justify-content: space-between;
     gap: 1em;
 }
 
-#contactFirstName, #contactLastName, #contactPostal {
+#contactFirstName,
+#contactLastName,
+#contactPostal {
     width: 50%;
 }
 
@@ -238,7 +241,7 @@ body {
 
 .countrySelect .css-qbdosj-Input {
     margin: 0px;
-    padding: 0px
+    padding: 0px;
 }
 
 .checkoutTop {
@@ -335,7 +338,7 @@ body {
 }
 
 .multi-input input {
-    height: 20%
+    height: 20%;
 }
 
 small {
