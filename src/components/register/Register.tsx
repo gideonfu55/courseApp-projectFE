@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { string } from 'yargs'
-import { userSchema } from '../Validations/UserValidation'
+import { userSchema } from '../../Validations/UserValidation'
 
 const Register: React.FC = () => {
     // States for registration
