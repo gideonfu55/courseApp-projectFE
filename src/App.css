@@ -210,7 +210,7 @@ body {
 .contactDetails {
     display: flex;
     flex-direction: column;
-    width: 40em;
+    width: 110vh;
     margin-bottom: 5rem;
 }
 
@@ -224,12 +224,6 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 1em;
-}
-
-#firstName,
-#lastName,
-#contactPostal {
-    width: 50%;
 }
 
 .countrySelect {
@@ -401,3 +395,35 @@ small {
     color: red;
     margin-left: 3em;
 }
+
+.checkoutError {
+    font-size: 0.75em;
+    color: red;
+    margin-top: -2.5em;
+    margin-bottom: 1.75em;
+}
+
+.checkoutError2 {
+    font-size: 0.75em;
+    color: red;
+    margin-top: -2.5em;
+    margin-bottom: 1.75em;
+}
+
+.firstNameContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.lastNameContainer {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+}
+
+.postalContainer {
+    display: flex;
+    flex-direction: column;
+}
+
