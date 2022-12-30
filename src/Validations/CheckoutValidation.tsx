@@ -13,14 +13,15 @@ export const checkoutValidation = yup.object().shape({
         .required('Required'),
     address: yup
         .string()
-        .min(5, 'Please enter full details')
-        .required(),
+        .min(5, 'Please enter full address details')
+        .required('Required'),
     postal: yup
         .string()
         .min(6, 'Please enter a valid postal code')
-        .required(),
+        .required('Required'),
     mobile: yup
         .string()
-        .min(8, 'Please enter a valid mobile number')
-        .required()
+        .matches(/^[0-9]+$/, 'Mobile number must be only digits')
+        .min(8, 'Invalid phone number')
+        .required('Required'),
 })

@@ -8,16 +8,12 @@ import PayNow from './Form/PayNow'
 
 import { useFormik } from 'formik'
 import { checkoutValidation } from '../Validations/CheckoutValidation'
-import { toast } from 'react-toastify'
+import { toast, ToastContainer } from 'react-toastify'
 
 const Checkout: React.FC = () => {
 
-  // const handleSubmit = async (event: React.FormEvent) => {
-  //   event.preventDefault()
-  // }
-
   // Login success message:
-  const orderSubmit = () => {
+  const orderSubmitted = () => {
     toast('Order has been place!', {
       position: 'bottom-center',
       autoClose: 5000,
@@ -40,9 +36,10 @@ const Checkout: React.FC = () => {
       country:'',
       mobile:''
     },
-    // validationSchema: {checkoutValidation},
+    validationSchema: checkoutValidation,
     onSubmit: values => {
       console.log(JSON.stringify(values, null, 2));
+      orderSubmitted();
     }
   });
 
@@ -60,55 +57,79 @@ const Checkout: React.FC = () => {
                 placeholder="Email"
                 onChange={formik.handleChange}
                 value={formik.values.email}
-                // required
               />
+              {formik.touched.email && formik.errors.email ? (
+                <div className="checkoutError">{formik.errors.email}</div>
+              ) : null}
+
               <div className='container-name'>
-                <input
-                  type="text"
-                  id="firstName"
-                  placeholder="First Name"
-                  onChange={formik.handleChange}
-                  value={formik.values.firstName}
-                  // required
-                />
-                <input
-                  type="text"
-                  id="lastName"
-                  placeholder="Last Name"
-                  onChange={formik.handleChange}
-                  value={formik.values.lastName}
-                  // required
-                />
+                <div className='firstNameContainer'>
+                  <input
+                    type="text"
+                    id="firstName"
+                    placeholder="First Name"
+                    onChange={formik.handleChange}
+                    value={formik.values.firstName}
+                  />
+                  {formik.touched.firstName && formik.errors.firstName ? (
+                    <div className="checkoutError2">{formik.errors.firstName}</div>
+                  ) : null}
+                </div>
+
+                <div className='lastNameContainer'>
+                  <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Last Name"
+                    onChange={formik.handleChange}
+                    value={formik.values.lastName}
+                  />
+                  {formik.touched.lastName && formik.errors.lastName ? (
+                    <div className="checkoutError2">{formik.errors.lastName}</div>
+                  ) : null}
+                </div>
               </div>
+
               <input
                 type="text"
                 id="address"
                 placeholder="Address"
                 onChange={formik.handleChange}
                 value={formik.values.address}
-                // required
               />
+              {formik.touched.address && formik.errors.address ? (
+                <div className="checkoutError">{formik.errors.address}</div>
+              ) : null}
+
               <div className='container-postal'>
                 <div className='countrySelect'>
                   <CountrySelect />
                 </div>
-                <input
-                  type="text"
-                  id="postal"
-                  placeholder="Postal Code"
-                  onChange={formik.handleChange}
-                  value={formik.values.postal}
-                  // required
-                />
+                <div className='postalContainer'>
+                  <input
+                    type="text"
+                    id="postal"
+                    placeholder="Postal Code"
+                    onChange={formik.handleChange}
+                    value={formik.values.postal}
+                  />
+                  {formik.touched.postal && formik.errors.postal ? (
+                    <div className="checkoutError2">{formik.errors.postal}</div>
+                  ) : null}
+                </div>
               </div>
+
               <input
                 type="text"
                 id="mobile"
                 placeholder="Mobile Number"
                 onChange={formik.handleChange}
                 value={formik.values.mobile}
-                // required
               />
+              {formik.touched.mobile && formik.errors.mobile ? (
+                <div className="checkoutError">{formik.errors.mobile}</div>
+              ) : null}
+
             </section>
           </div>
 
@@ -148,6 +169,10 @@ const Checkout: React.FC = () => {
 
         <button type="submit" id="buySubmit">Complete Purchase</button>
       </form>
+
+      <ToastContainer
+        style={{fontSize: 13}}
+      />
     </div>
   )
 }

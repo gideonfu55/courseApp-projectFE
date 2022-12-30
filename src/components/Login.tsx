@@ -23,15 +23,17 @@ const Login: React.FC = () => {
     })
   };
 
-  // Handling the email check
+  // Email change handler:
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
   }
 
+  // Password change handler:
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setPassword(e.target.value)
   }
 
+  // Form submit handler:
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     
