@@ -1,17 +1,19 @@
 import './App.css'
-import Login from './components/Login'
-import Register from './components/Register'
-import AddCourse from './components/AddCourse'
-import Checkout from './components/Checkout'
+import Login from './components/login/Login'
+import Register from './components/register/Register'
+import AddCourse from './components/addCourse/AddCourse'
+import Checkout from './components/checkout/Checkout'
 
 import { Routes, Route } from 'react-router-dom'
-import NavBar from './components/NavBar'
+import NavBar from './components/navbar/NavBar'
 import Card from './components/card/Card'
 import CourseCatalogue from './components/courseCatalogue/CourseCatalogue'
+import NavBar1 from './components/navbar/NavBar'
 
 function App() {
     return (
         <div className="App">
+            {/* <NavBar /> */}
             <NavBar />
             {/* Place any new pages as a Route element inside the Routes tag
       Optional: update NavBar element to expose the routes*/}
